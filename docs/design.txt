@@ -1,0 +1,291 @@
+  Problem statement:
+    A user is asked for what they are looking to replace in a recipe from the 
+    ingredients of Eggs, Milk, Butter, Yogurt, or Honey. Depending on what they
+    picked they will be prompted for how much they are looking to replace of
+    that item and then the program will convert it and print out the results.
+    
+  Nouns:
+  
+    user, ingredients, eggs, milk, butter, yogurt, honey
+    
+  Verbs:
+  
+    Asked, prompted, convert, print.
+    
+  ----------------------------------------------------------------------------
+  Defining diagram
+  
+  Inputs:
+  
+    userInput
+    
+  Processing:
+  
+    Prompt for userInputs
+    Convert the inputs
+    Calculate conversions
+    Set up output
+    Print output
+    
+  Outputs:
+    
+    Display output
+  
+  
+  Pseudocode
+  ----------------------------------------------------------------------------
+  Converting to Vegan Ingredients
+  
+  CalculateLeavening
+    Convert eggs
+    Create output statement
+  END
+  
+  CalculateBinding
+    Convert eggs
+    Create output statement
+  END
+  
+  CalculateCustardAndQuiche
+    Convert eggs
+    Create output statement
+  END
+  
+  CalculateMilk
+    Convert milk
+    Create output statement
+  END
+  
+  CalculateButter
+    Convert butter
+    Create output statement
+  END
+  
+  CalculateYogurt
+    Convert yogurt
+    Create output statement
+  END
+  
+  CalculateHoney
+    Convert honey
+    Create output statement
+  END
+  
+  Main
+    Initialize butter
+    Initialize eggs
+    Initialize honey
+    Initialize milk
+    Initialize output
+    Initialize userInput
+    Initialize yogurt
+    
+    
+    Prompt for "Which ingredient are you looking to replace?"
+    IF eggs THEN
+      Prompt "Is it for leavening, binding, or custards/quiches?"
+      IF leavening THEN
+        "Put in how many eggs to replace?"
+        Call CalculateLeavening
+        OUTPUT choices with their conversions.
+      ELSE IF binding THEN
+        "How many eggs to replace?"
+        Call CalculateBinding
+        OUTPUT choices and their conversions.
+      ELSE custards/quiches THEN
+        "How many eggs to replace?"
+        Call CalculateCustardAndQuiche
+        OUTPUT chocies and their conversions.
+      ENDIF
+    ELSE IF  milk THEN
+      "What is the measurement of milk to be replaced?"
+      Call CalculateMilk
+      OUTPUT choices and conversions and note about butter milk
+    ELSE IF butter THEN
+      "What is the measurement of butter to be replaced?"
+      Call CalculateButter
+      OUTPUT choices and conversions
+    ELSE IF yogurt THEN
+      "What is the amount of yogurt to be replaced?"
+      Call CalculateYogurt
+      OUTPUT choices and conversions
+    ELSE
+      "What is the amount of honey to be replaced?"
+      Call CalculateHoney
+      OUTPUT choices and conversions
+  END  
+  Call Main
+ --------------------------------------------------------------------------
+  VARIABLES: userInput, butter, milk, eggs, honey, yogurt, output
+
+  TEST CASE 1:
+
+    INPUT VALUES: butter, 2 tbsp
+
+    EXPECTED RESULT:
+      
+      You will need to pick from one of the following:
+        2 tbsp of Coconut Oil.
+        2 tbsp of Earth Balance Buttery Spread.
+        2 tbsp of Earth Balance Vegan Buttery Sticks.
+        2 tbsp of Smart Balance Light Original Buttery Spread. 
+
+    ACTUAL RESULT: 
+      
+      You will need to pick from one of the following:
+        2 tbsp of Coconut Oil.
+        2 tbsp of Earth Balance Buttery Spread.
+        2 tbsp of Earth Balance Vegan Buttery Sticks.
+        2 tbsp of Smart Balance Light Original Buttery Spread. 
+
+  TEST CASE 2:
+
+    INPUT VALUES: MILK, 1 cup
+
+    EXPECTED RESULT: 
+      
+      You will need to pick from one of the following:
+        1 cup of Soy milk.
+        1 cup of Coconut milk.
+        1 cup of Almond milk.
+        1 cup of Rice milk.
+        1 cup of Hemp milk.
+        1 cup of Hazelnut milk.
+
+    ACTUAL RESULT: 
+    
+      You will need to pick from one of the following:
+        1 cup of Soy milk.
+        1 cup of Coconut milk.
+        1 cup of Almond milk.
+        1 cup of Rice milk.
+        1 cup of Hemp milk.
+        1 cup of Hazelnut milk.
+
+
+  TEST CASE 3:
+
+    INPUT VALUES: eggs, leavening, 2
+
+    EXPECTED RESULT:
+      
+      You will need to pick from one of the following:
+        4 tsp of baking soda plus 4 tbsp warm water
+        2 tsp of baking powder plus 2 tsp vinegar
+        2 tsp of baker's yeast plus 0.5 C warm water
+        2 tbsp of ground flaxseeds plus 6 tbsp warm water
+
+    ACTUAL RESULT:
+      
+      You will need to pick from one of the following:
+        4 tsp of baking soda plus 4 tbsp warm water
+        2 tsp of baking powder plus 2 tsp vinegar
+        2 tsp of baker's yeast plus 0.5 C warm water
+        2 tbsp of ground flaxseeds plus 6 tbsp warm water
+
+    
+  TEST CASE 4:
+
+    INPUT VALUES: honey, 2 tsp
+
+    EXPECTED RESULT: 
+      
+      You will need to pick from one of the following:
+        2 tsp of Maple Syrup.
+        2 tsp of Agave Nectar. 
+
+    ACTUAL RESULT:
+    
+      You will need to pick from one of the following:
+        2 tsp of Maple Syrup.
+        2 tsp of Agave Nectar. 
+        
+  TEST CASE 5:
+
+    INPUT VALUES: yogurt, 1 cup
+
+    EXPECTED RESULT:
+      
+      You will need to blend together:
+        1 C of Silken Tofu.
+        2 tbsp of Lemon Juice.
+        0.25 tsp of Salt. 
+
+    ACTUAL RESULT:
+      
+      You will need to blend together:
+        1 C of Silken Tofu.
+        2 tbsp of Lemon Juice.
+        0.25 tsp of Salt.
+  
+  TEST CASE 6:
+
+    INPUT VALUES: apple
+
+    EXPECTED RESULT:
+      
+      You did not enter in the right word, please try again.
+
+    ACTUAL RESULT:
+      
+      You did not enter in the right word, please try again. 
+
+  TEST CASE 7:
+
+    INPUT VALUES: eggs, two
+
+    EXPECTED RESULT:
+      
+      You did not enter a number, please try again.
+
+    ACTUAL RESULT:
+      
+      You did not enter a number, please try again.
+      
+  TEST CASE 8:
+
+    INPUT VALUES:
+
+    EXPECTED RESULT:
+      
+      You did not enter in the right word, please try again.
+
+    ACTUAL RESULT:
+      
+      You did not enter in the right word, please try again.     
+
+  TEST CASE 9:
+
+    INPUT VALUES: honey, 
+
+    EXPECTED RESULT:
+      
+      Please enter a number greater than zero.
+
+    ACTUAL RESULT:
+    
+      Please enter a number greater than zero.
+      
+  TEST CASE 10:
+
+    INPUT VALUES: EGGS, binding, 0
+
+    EXPECTED RESULT:
+      
+      Please enter a number greater than zero.
+
+    ACTUAL RESULT:
+    
+      Please enter a number greater than zero.   
+
+  TEST CASE 11:
+
+    INPUT VALUES: Milk, -1
+
+    EXPECTED RESULT:
+      
+      Please enter a number greater than zero.
+
+    ACTUAL RESULT:
+    
+      Please enter a number greater than zero.
